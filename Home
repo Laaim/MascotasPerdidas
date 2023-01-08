@@ -1,55 +1,35 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Encuentra a tu animal perdido</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <h1>Encuentra a tu animal perdido</h1>
-    <p>Ingresa la información del animal perdido a continuación para buscarlo:</p>
-    <form id="search-form">
-      <!-- Solo muestra opciones de perro y gato -->
-      <label for="type">Tipo de animal:</label><br />
-      <select id="type">
-        <option value="perro">Perro</option>
-        <option value="gato">Gato</option>
-      </select><br />
-      <!-- Reemplaza el campo de raza por un campo de color -->
-      <label for="color">Color:</label><br />
-      <input type="text" id="color"><br />
-      <label for="location">Ubicación donde se perdió:</label><br />
-      <!-- Muestra opciones de ciudades en la zona norte de Buenos Aires -->
-      <select id="location">
-        <option value="san-isidro">San Isidro</option>
-        <option value="vicente-lopez">Vicente López</option>
-        <option value="martinez">Martínez</option>
-        <option value="general-san-martin">General San Martín</option>
-        <option value="otra">Otra</option>
-      </select><br />
-      <!-- Agrega una opción para elegir si la mascota fue encontrada o perdida -->
-      <label for="found-lost">¿Encontraste o perdiste a la mascota?</label><br />
-      <select id="found-lost">
-        <option value="found">Encontré a mi mascota</option>
-        <option value="lost">Perdí a mi mascota</option>
-      </select><br />
-      <!-- Agrega un campo para adjuntar fotos y una descripción de la mascota -->
-      <label for="photos">Adjunta fotos de tu mascota:</label><br />
-      <input type="file" id="photos" multiple><br />
-      <label for="description">Descripción de tu mascota:</label><br />
-      <textarea id="description"></textarea><br />
-      <input type="submit" value="Buscar">
-    </form>
-    <div id="results">
-      <!-- Sección de Tinder -->
-      <h2>Mascotas encontradas cerca de ti</h
-
-    <div id="tinder-section">
-  <h2>Mascotas perdidas cerca de ti</h2>
-  <div id="tinder-card-container">
-    <!-- Aquí se mostrarán las tarjetas de las mascotas perdidas -->
-  </div>
-  <button id="tinder-like-button">Me gusta</button>
-  <button id="tinder-dislike-button">No me gusta</button>
-</div>
-  </body>
+<head>
+	<title>Encuentra tu mascota</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Encuentra tu mascota</h1>
+	<form>
+		<label for="tipo">¿Es un perro o un gato?</label><br>
+		<input type="radio" name="tipo" value="perro"> Perro<br>
+		<input type="radio" name="tipo" value="gato"> Gato<br>
+		<br>
+		<label for="ciudad">En qué ciudad de Buenos Aires lo encontraste:</label><br>
+		<select name="ciudad">
+			<option value="zonaNorte">Zona Norte</option>
+			<option value="zonaSur">Zona Sur</option>
+			<option value="zonaOeste">Zona Oeste</option>
+			<option value="zonaEste">Zona Este</option>
+		</select>
+		<br><br>
+		<label for="color">¿Qué color de pelaje tiene tu mascota?</label><br>
+		<input type="text" name="color"><br><br>
+		<label for="imagen">Adjunta una imagen de tu mascota (obligatorio):</label><br>
+		<input type="file" name="imagen" required><br><br>
+		<label for="estado">¿Has encontrado o has perdido a tu mascota?</label><br>
+		<input type="radio" name="estado" value="encontrado"> He encontrado a mi mascota<br>
+		<input type="radio" name="estado" value="perdido"> He perdido a mi mascota<br>
+		<br>
+		<label for="detalles">Cuéntanos más sobre tu mascota (opcional):</label><br>
+		<textarea name="detalles"></textarea><br><br>
+		<input type="submit" value="Enviar">
+	</form> 
+</body>
 </html>
